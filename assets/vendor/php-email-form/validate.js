@@ -59,27 +59,66 @@
       if( response.ok ) {
         return response.text();
       } else {
-        throw new Error(`${response.status} ${response.statusText} ${response.url}`); 
+        // Manejar error de respuesta HTTP directamente
+        thisForm.querySelector('.loading').classList.remove('d-block');
+        thisForm.querySelector('.error-message').innerHTML = `HTTP Error: ${response.status} ${response.statusText}`;
+        thisForm.querySelector('.error-message').classList.add('d-block');
+        return null;
       }
     })
     .then(data => {
-      thisForm.querySelector('.loading').classList.remove('d-block');
-      if (data.trim() == 'OK') {
-        thisForm.querySelector('.sent-message').classList.add('d-block');
-        thisForm.reset(); 
-      } else {
-        throw new Error(data ? data : 'Form submission failed and no error message returned from: ' + action); 
+      if (!data) return; // Si hubo error HTTP, no procesar
+      
+      // Limpiar todos los mensajes antes de mostrar uno nuevo
+      clearAllMessages(thisForm);
+      
+      // Intentar parsear como JSON
+      try {
+        const response = JSON.parse(data);
+        if (response.status === 'success') {
+          // Mostrar mensaje de éxito
+          thisForm.querySelector('.sent-message').innerHTML = response.message;
+          thisForm.querySelector('.sent-message').classList.add('d-block');
+          thisForm.reset(); 
+        } else if (response.status === 'error') {
+          // Mostrar error directamente
+          thisForm.querySelector('.error-message').innerHTML = response.message;
+          thisForm.querySelector('.error-message').classList.add('d-block');
+        } else {
+          // Respuesta JSON sin status válido
+          thisForm.querySelector('.error-message').innerHTML = 'Invalid response format';
+          thisForm.querySelector('.error-message').classList.add('d-block');
+        }
+      } catch (e) {
+        // Si no es JSON válido, usar el comportamiento original
+        if (data.trim() == 'OK') {
+          thisForm.querySelector('.sent-message').classList.add('d-block');
+          thisForm.reset(); 
+        } else {
+          // Mostrar el error directamente
+          thisForm.querySelector('.error-message').innerHTML = data || 'Form submission failed';
+          thisForm.querySelector('.error-message').classList.add('d-block');
+        }
       }
     })
     .catch((error) => {
-      displayError(thisForm, error);
+      // Solo manejar errores de red o parsing críticos
+      thisForm.querySelector('.loading').classList.remove('d-block');
+      thisForm.querySelector('.error-message').innerHTML = 'Network error. Please try again.';
+      thisForm.querySelector('.error-message').classList.add('d-block');
     });
   }
 
   function displayError(thisForm, error) {
     thisForm.querySelector('.loading').classList.remove('d-block');
-    thisForm.querySelector('.error-message').innerHTML = error;
+    thisForm.querySelector('.error-message').innerHTML = error.message || error;
     thisForm.querySelector('.error-message').classList.add('d-block');
+  }
+
+  function clearAllMessages(thisForm) {
+    thisForm.querySelector('.loading').classList.remove('d-block');
+    thisForm.querySelector('.error-message').classList.remove('d-block');
+    thisForm.querySelector('.sent-message').classList.remove('d-block');
   }
 
 })();
