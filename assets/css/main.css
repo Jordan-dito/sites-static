@@ -2646,6 +2646,27 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
+/* Ocultar iconos de detalles en la sección portfolio - solo mantener zoom */
+#portfolio .portfolio-item .portfolio-info .details-link {
+  display: none !important;
+}
+
+/* Ocultar botones de navegación de Swiper */
+.swiper-button-next,
+.swiper-button-prev,
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none !important;
+}
+
+/* Ocultar cualquier botón o flecha no deseada en portfolio */
+#portfolio button,
+#portfolio .btn,
+#portfolio [class*="nav"],
+#portfolio [class*="control"] {
+  display: none !important;
+}
+
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
