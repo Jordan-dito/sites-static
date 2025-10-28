@@ -35,14 +35,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Cargar configuración
         $config = require_once 'config.php';
         
-        // Configuración del servidor SMTP - AlwaysData
+        // Configuración del servidor SMTP - GoDaddy
         $mail->isSMTP();
-        $mail->Host = $config['smtp']['host'];  // smtp-ditodevs.alwaysdata.net
+        $mail->Host = $config['smtp']['host'];  // smtpout.secureserver.net
         $mail->SMTPAuth = true;
-        $mail->Username = $config['smtp']['username'];  // Tu email completo
+        $mail->Username = $config['smtp']['username'];  // oney.bedoya@witfolk.com
         $mail->Password = $config['smtp']['password'];  // Tu contraseña
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;  // TLS para puerto 587
         $mail->Port = $config['smtp']['port'];  // 587
+        
+        // Configuraciones adicionales para GoDaddy
+        $mail->SMTPOptions = array(
+            'ssl' => array(
+                'verify_peer' => false,
+                'verify_peer_name' => false,
+                'allow_self_signed' => true
+            )
+        );
+        $mail->SMTPDebug = 2; // Debug activado
         
         // Configuración de caracteres
         $mail->CharSet = 'UTF-8';
@@ -116,10 +126,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         ]);
         
     } catch (Exception $e) {
-        // Respuesta de error
+        // Respuesta de error con detalles del debug
         echo json_encode([
             'status' => 'error', 
-            'message' => '❌ We apologize, but there was an issue sending your message. Please try again or contact us directly.'
+            'message' => '❌ Error: ' . $mail->ErrorInfo . ' | Exception: ' . $e->getMessage()
         ]);
     }
     

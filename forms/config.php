@@ -3,19 +3,19 @@
 // Actualiza estos valores con tu información
 
 return [
-    // Configuración SMTP - AlwaysData
+    // Configuración SMTP - GoDaddy
     'smtp' => [
-        'host' => 'smtp-ditodevs.alwaysdata.net',  // Servidor SMTP AlwaysData
-        'port' => 587,                             // Puerto SMTP (587 para TLS)
-        'username' => 'ditodevs@alwaysdata.net',  // Tu email completo
-        'password' => 'BARCELONA1925*',               // Tu contraseña de email
-        'encryption' => 'tls'                      // Encriptación TLS
+        'host' => 'smtpout.secureserver.net',     // Servidor SMTP GoDaddy
+        'port' => 587,                            // Puerto TLS (587 para TLS)
+        'username' => 'oney.bedoya@witfolk.com',  // Tu email completo de GoDaddy
+        'password' => 'Test123456**',          // Tu contraseña de email
+        'encryption' => 'tls'                     // Encriptación TLS
     ],
     
     // Emails de destino
     'emails' => [
-        'contact' => 'vta9351394@gmail.com',  // Email principal de contacto
-        'admin' => 'vta9351394@gmail.com'      // Email administrativo
+        'contact' => 'oney.bedoya@witfolk.com',  // Email principal de contacto
+        'admin' => 'oney.bedoya@witfolk.com'      // Email administrativo
     ],
     
     // Configuración de la empresa
