@@ -2667,6 +2667,19 @@ section,
   display: none !important;
 }
 
+/* Ocultar puntos de paginación de Swiper */
+.swiper-pagination {
+  display: none !important;
+}
+
+.swiper-pagination-bullet {
+  display: none !important;
+}
+
+.swiper-pagination-bullet-active {
+  display: none !important;
+}
+
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
