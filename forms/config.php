@@ -7,15 +7,15 @@ return [
     'smtp' => [
         'host' => 'smtpout.secureserver.net',     // Servidor SMTP GoDaddy
         'port' => 465,                            // Puerto SSL (465 para SSL)
-        'username' => 'oney.bedoya@witfolk.com',  // Tu email completo de GoDaddy
-        'password' => 'Test123456**',          // Tu contraseña de email
+        'username' => 'pruebaValentina@witfolk.com',  // Tu email completo de GoDaddy
+        'password' => 'Barcelona2025*',          // Tu contraseña de email
         'encryption' => 'ssl'                     // Encriptación SSL
     ],
     
     // Emails de destino
     'emails' => [
-        'contact' => 'oney.bedoya@witfolk.com',  // Email principal de contacto
-        'admin' => 'oney.bedoya@witfolk.com'      // Email administrativo
+        'contact' => 'vta9351394@gmail.com',  // Email principal de contacto
+        'admin' => 'vta9351394@gmail.com'      // Email administrativo
     ],
     
     // Configuración de la empresa
