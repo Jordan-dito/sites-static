@@ -3,13 +3,13 @@
 // Actualiza estos valores con tu información
 
 return [
-    // Configuración SMTP - GoDaddy
+    // Configuración SMTP - GoDaddy (Puerto 25)
     'smtp' => [
         'host' => 'smtpout.secureserver.net',     // Servidor SMTP GoDaddy
-        'port' => 465,                            // Puerto SSL (465 para SSL)
+        'port' => 25,                             // Puerto 25 (sin encriptación)
         'username' => 'pruebaValentina@witfolk.com',  // Tu email completo de GoDaddy
         'password' => 'Barcelona2025*',          // Tu contraseña de email
-        'encryption' => 'ssl'                     // Encriptación SSL
+        'encryption' => 'none'                    // Sin encriptación
     ],
     
     // Emails de destino

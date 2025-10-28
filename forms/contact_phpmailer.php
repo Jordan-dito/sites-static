@@ -35,14 +35,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Cargar configuración
         $config = require_once 'config.php';
         
-        // Configuración del servidor SMTP - GoDaddy
+        // Configuración del servidor SMTP - GoDaddy (Puerto 25)
         $mail->isSMTP();
         $mail->Host = $config['smtp']['host'];  // smtpout.secureserver.net
         $mail->SMTPAuth = true;
-        $mail->Username = $config['smtp']['username'];  // oney.bedoya@witfolk.com
+        $mail->Username = $config['smtp']['username'];  // pruebaValentina@witfolk.com
         $mail->Password = $config['smtp']['password'];  // Tu contraseña
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;  // SSL para puerto 465
-        $mail->Port = $config['smtp']['port'];  // 465
+        $mail->SMTPSecure = false;  // Sin encriptación para puerto 25
+        $mail->Port = $config['smtp']['port'];  // 25
         
         // Configuraciones adicionales para GoDaddy
         $mail->SMTPOptions = array(
