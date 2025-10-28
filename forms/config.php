@@ -14,8 +14,8 @@ return [
     
     // Emails de destino
     'emails' => [
-        'contact' => 'oney.bedoya@witfolk.com',  // Email principal de contacto
-        'admin' => 'oney.bedoya@witfolk.com'      // Email administrativo
+        'contact' => 'vta9351394@gmail.com',  // Email principal de contacto
+        'admin' => 'vta9351394@gmail.com'      // Email administrativo
     ],
     
     // Configuración de la empresa
