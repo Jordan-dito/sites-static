@@ -41,8 +41,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->SMTPAuth = true;
         $mail->Username = $config['smtp']['username'];  // oney.bedoya@witfolk.com
         $mail->Password = $config['smtp']['password'];  // Tu contraseña
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;  // TLS para puerto 587
-        $mail->Port = $config['smtp']['port'];  // 587
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;  // SSL para puerto 465
+        $mail->Port = $config['smtp']['port'];  // 465
         
         // Configuraciones adicionales para GoDaddy
         $mail->SMTPOptions = array(

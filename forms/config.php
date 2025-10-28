@@ -6,10 +6,10 @@ return [
     // Configuración SMTP - GoDaddy
     'smtp' => [
         'host' => 'smtpout.secureserver.net',     // Servidor SMTP GoDaddy
-        'port' => 587,                            // Puerto TLS (587 para TLS)
+        'port' => 465,                            // Puerto SSL (465 para SSL)
         'username' => 'oney.bedoya@witfolk.com',  // Tu email completo de GoDaddy
         'password' => 'Test123456**',          // Tu contraseña de email
-        'encryption' => 'tls'                     // Encriptación TLS
+        'encryption' => 'ssl'                     // Encriptación SSL
     ],
     
     // Emails de destino
