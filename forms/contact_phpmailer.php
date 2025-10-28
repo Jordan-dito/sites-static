@@ -52,7 +52,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 'allow_self_signed' => true
             )
         );
-        $mail->SMTPDebug = 2; // Debug activado
+        $mail->SMTPDebug = 0; // Debug desactivado
+        $mail->Timeout = 30; // Timeout de 30 segundos
         
         // Configuración de caracteres
         $mail->CharSet = 'UTF-8';
@@ -126,10 +127,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         ]);
         
     } catch (Exception $e) {
-        // Respuesta de error con detalles del debug
+        // Respuesta de error simplificada
         echo json_encode([
             'status' => 'error', 
-            'message' => '❌ Error: ' . $mail->ErrorInfo . ' | Exception: ' . $e->getMessage()
+            'message' => '❌ Error al enviar el mensaje. Intenta de nuevo.'
         ]);
     }
     
