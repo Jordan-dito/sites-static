@@ -363,20 +363,20 @@
           <div class="col-lg-12">
             <!-- PDF Controls -->
             <div class="pdf-controls">
-              <button id="pdf-prev" class="pdf-nav-btn" aria-label="Página anterior">
+              <button id="pdf-prev" class="pdf-nav-btn" aria-label="Previous page">
                 <i class="bi bi-chevron-left"></i>
               </button>
               <div class="pdf-page-info">
                 <span id="pdf-page-num">1</span> / <span id="pdf-total-pages">-</span>
               </div>
-              <button id="pdf-next" class="pdf-nav-btn" aria-label="Página siguiente">
+              <button id="pdf-next" class="pdf-nav-btn" aria-label="Next page">
                 <i class="bi bi-chevron-right"></i>
               </button>
               <a href="pdf/WitFolk Enterprise SAS (Hostile Environment Recruitment Process).pdf" 
                  target="_blank" 
                  class="pdf-download-btn"
-                 title="Descargar PDF">
-                <i class="bi bi-download"></i> Descargar
+                 title="Download PDF">
+                <i class="bi bi-download"></i> Download
               </a>
             </div>
             
@@ -384,7 +384,7 @@
             <div class="pdf-container">
               <div class="pdf-loader">
                 <div class="spinner"></div>
-                <p>Cargando documento...</p>
+                <p>Loading document...</p>
               </div>
               <canvas id="pdf-canvas" class="pdf-canvas"></canvas>
             </div>
@@ -408,20 +408,20 @@
           <div class="col-lg-12">
             <!-- PDF Controls -->
             <div class="pdf-controls">
-              <button id="pdf-arabic-prev" class="pdf-nav-btn" aria-label="Página anterior">
+              <button id="pdf-arabic-prev" class="pdf-nav-btn" aria-label="Previous page">
                 <i class="bi bi-chevron-left"></i>
               </button>
               <div class="pdf-page-info">
                 <span id="pdf-arabic-page-num">1</span> / <span id="pdf-arabic-total-pages">-</span>
               </div>
-              <button id="pdf-arabic-next" class="pdf-nav-btn" aria-label="Página siguiente">
+              <button id="pdf-arabic-next" class="pdf-nav-btn" aria-label="Next page">
                 <i class="bi bi-chevron-right"></i>
               </button>
               <a href="pdf/WITFOLK-BROCHURE (Árabe).pdf" 
                  target="_blank" 
                  class="pdf-download-btn"
-                 title="Descargar PDF">
-                <i class="bi bi-download"></i> Descargar
+                 title="Download PDF">
+                <i class="bi bi-download"></i> Download
               </a>
             </div>
             
@@ -429,7 +429,7 @@
             <div class="pdf-container">
               <div class="pdf-loader pdf-arabic-loader">
                 <div class="spinner"></div>
-                <p>Cargando documento...</p>
+                <p>Loading document...</p>
               </div>
               <canvas id="pdf-arabic-canvas" class="pdf-canvas"></canvas>
             </div>
@@ -1090,7 +1090,7 @@
         }).catch(function(error) {
           console.error('Error loading PDF:', error);
           if (loader) {
-            loader.innerHTML = '<p>Error al cargar el PDF. <a href="' + pdfPath + '" target="_blank">Haz clic aquí para descargarlo</a></p>';
+            loader.innerHTML = '<p>Error loading PDF. <a href="' + pdfPath + '" target="_blank">Click here to download it</a></p>';
           }
         });
       }
@@ -1188,7 +1188,7 @@
         }).catch(function(error) {
           console.error('Error loading PDF:', error);
           if (loader) {
-            loader.innerHTML = '<p>Error al cargar el PDF. <a href="' + pdfPath + '" target="_blank">Haz clic aquí para descargarlo</a></p>';
+            loader.innerHTML = '<p>Error loading PDF. <a href="' + pdfPath + '" target="_blank">Click here to download it</a></p>';
           }
         });
       }
