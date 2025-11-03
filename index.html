@@ -83,7 +83,6 @@
             <li><a href="#home" class="active">Home</a></li>
             <li><a href="#about">About us</a></li>
             <li><a href="#services">Services</a></li>
-            <li><a href="#heat-training">Heat</a></li>
             <li><a href="#quotation">Quotation</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
@@ -350,6 +349,96 @@
 
     </section><!-- /Services Carousel Section -->
 
+    <!-- PDF Viewer Section -->
+    <section id="pdf-viewer" class="pdf-viewer section light-background">
+      
+      <!-- Section Title -->
+      <div class="container section-title">
+        <span>Recruiting for HEAT (English)</span>
+        <h2>Recruiting for HEAT (English)</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-12">
+            <!-- PDF Controls -->
+            <div class="pdf-controls">
+              <button id="pdf-prev" class="pdf-nav-btn" aria-label="Página anterior">
+                <i class="bi bi-chevron-left"></i>
+              </button>
+              <div class="pdf-page-info">
+                <span id="pdf-page-num">1</span> / <span id="pdf-total-pages">-</span>
+              </div>
+              <button id="pdf-next" class="pdf-nav-btn" aria-label="Página siguiente">
+                <i class="bi bi-chevron-right"></i>
+              </button>
+              <a href="pdf/WitFolk Enterprise SAS (Hostile Environment Recruitment Process).pdf" 
+                 target="_blank" 
+                 class="pdf-download-btn"
+                 title="Descargar PDF">
+                <i class="bi bi-download"></i> Descargar
+              </a>
+            </div>
+            
+            <!-- PDF Canvas Container -->
+            <div class="pdf-container">
+              <div class="pdf-loader">
+                <div class="spinner"></div>
+                <p>Cargando documento...</p>
+              </div>
+              <canvas id="pdf-canvas" class="pdf-canvas"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /PDF Viewer Section -->
+
+    <!-- PDF Viewer Section - Arabic Brochure -->
+    <section id="pdf-viewer-arabic" class="pdf-viewer section light-background">
+      
+      <!-- Section Title -->
+      <div class="container section-title">
+        <span>Recruiting for HEAT (Arabic)</span>
+        <h2>Recruiting for HEAT (Arabic)</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-12">
+            <!-- PDF Controls -->
+            <div class="pdf-controls">
+              <button id="pdf-arabic-prev" class="pdf-nav-btn" aria-label="Página anterior">
+                <i class="bi bi-chevron-left"></i>
+              </button>
+              <div class="pdf-page-info">
+                <span id="pdf-arabic-page-num">1</span> / <span id="pdf-arabic-total-pages">-</span>
+              </div>
+              <button id="pdf-arabic-next" class="pdf-nav-btn" aria-label="Página siguiente">
+                <i class="bi bi-chevron-right"></i>
+              </button>
+              <a href="pdf/WITFOLK-BROCHURE (Árabe).pdf" 
+                 target="_blank" 
+                 class="pdf-download-btn"
+                 title="Descargar PDF">
+                <i class="bi bi-download"></i> Descargar
+              </a>
+            </div>
+            
+            <!-- PDF Canvas Container -->
+            <div class="pdf-container">
+              <div class="pdf-loader pdf-arabic-loader">
+                <div class="spinner"></div>
+                <p>Cargando documento...</p>
+              </div>
+              <canvas id="pdf-arabic-canvas" class="pdf-canvas"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /PDF Viewer Section - Arabic -->
+
     <!-- Services Section -->
     <section id="services" class="services section">
 
@@ -552,266 +641,6 @@
         </ul>
       </div>
     </div>
-
-    <!-- Heat Training Section -->
-    <section id="heat-training" class="heat-training section light-background">
-      
-      <!-- Section Title -->
-      <div class="container section-title">
-        <span>Heat</span>
-        <h2>Heat</h2>
-        <h4>Hostile Environment Awareness Training</h4>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-        
-        <!-- Description and Image -->
-        <div class="row align-items-center mb-5">
-          <div class="col-lg-6">
-            <p class="heat-description">
-              Three to five days of intensive training in a real-life exercise. Training teaches skills for navigating dangerous situations aiming to provide staff members and employees how they can minimize their risk and protect themselves through a personal security and awareness plan.
-            </p>
-          </div>
-          <div class="col-lg-6 text-center">
-            <div class="heat-image-container">
-              <img src="assets/img/bg/heat-training.jpg" alt="Heat Training" class="img-fluid rounded heat-main-image">
-            </div>
-          </div>
-        </div>
-
-        <!-- Training Modules Grid -->
-        <div class="row mb-5">
-          <div class="col-12 text-center mb-4">
-            <h3 class="heat-subtitle">Training Modules</h3>
-          </div>
-          
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-            <div class="heat-module-card">
-              <div class="heat-module-icon">
-                <i class="bi bi-shield-check"></i>
-              </div>
-              <h5>Personal Security Awareness</h5>
-              <p>Being aware of surroundings and taking proactive measures.</p>
-            </div>
-          </div>
-          
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-            <div class="heat-module-card">
-              <div class="heat-module-icon">
-                <i class="bi bi-geo-alt"></i>
-              </div>
-              <h5>Travel Safety</h5>
-              <p>Pre-travel preparation and emergency situations.</p>
-            </div>
-          </div>
-          
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-            <div class="heat-module-card">
-              <div class="heat-module-icon">
-                <i class="bi bi-exclamation-triangle"></i>
-              </div>
-              <h5>Emergency Management</h5>
-              <p>Preparing for and responding to security issues.</p>
-            </div>
-          </div>
-          
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-            <div class="heat-module-card">
-              <div class="heat-module-icon">
-                <i class="bi bi-chat-square-text"></i>
-              </div>
-              <h5>Basic Negotiations Skills</h5>
-              <p>Strategic management tools with conflict-sensitive approach.</p>
-            </div>
-          </div>
-          
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-            <div class="heat-module-card">
-              <div class="heat-module-icon">
-                <i class="bi bi-crosshair"></i>
-              </div>
-              <h5>Weapon Familiarization</h5>
-              <p>Classroom instruction and hands-on practice.</p>
-            </div>
-          </div>
-          
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-            <div class="heat-module-card">
-              <div class="heat-module-icon">
-                <i class="bi bi-people"></i>
-              </div>
-              <h5>Gender-Based Violence (GBV)</h5>
-              <p>Education on preventing and responding to GBV.</p>
-            </div>
-          </div>
-          
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-            <div class="heat-module-card">
-              <div class="heat-module-icon">
-                <i class="bi bi-heart-pulse"></i>
-              </div>
-              <h5>Core Survival Skills</h5>
-              <p>Essential skills like shelters, water, fire, and first aid.</p>
-            </div>
-          </div>
-          
-        </div>
-
-        <!-- Info Section -->
-        <div class="row">
-          <div class="col-lg-4 mb-4">
-            <div class="heat-info-card">
-              <div class="heat-info-icon">
-                <i class="bi bi-bullseye"></i>
-              </div>
-              <h4>Purpose</h4>
-              <p>To teach individuals how to stay safe when working in high-risk areas.</p>
-            </div>
-          </div>
-          
-          <div class="col-lg-4 mb-4">
-            <div class="heat-info-card">
-              <div class="heat-info-icon">
-                <i class="bi bi-gear"></i>
-              </div>
-              <h4>How it Works</h4>
-              <p>Participants learn behavioral changes and practical skills to respond to security risks.</p>
-            </div>
-          </div>
-          
-          <div class="col-lg-4 mb-4">
-            <div class="heat-info-card">
-              <div class="heat-info-icon">
-                <i class="bi bi-list-check"></i>
-              </div>
-              <h4>Methods</h4>
-              <ul class="heat-list-compact">
-                <li>Practical exercises and realistic simulations</li>
-                <li>Storylines, situation updates, and video news broadcasts</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="row mt-4">
-          <div class="col-lg-8 mb-4">
-            <div class="heat-info-card">
-              <h4><i class="bi bi-check-circle"></i> Benefits</h4>
-              <ul class="heat-list-compact">
-                <li>Improves personal safety and security awareness</li>
-                <li>Teaches defensive driving and navigation skills</li>
-                <li>Prepares for environmental risks and kidnapping situations</li>
-                <li>Basic first aid and psychological first aid training</li>
-              </ul>
-            </div>
-          </div>
-          
-          <div class="col-lg-4 mb-4">
-            <div class="heat-info-card">
-              <h4><i class="bi bi-people-fill"></i> Who is it for?</h4>
-              <ul class="heat-list-compact">
-                <li>Humanitarian aid workers</li>
-                <li>Journalists</li>
-                <li>Business travelers</li>
-                <li>NGO personnel</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /Heat Training Section -->
-
-    <!-- PDF Viewer Section -->
-    <section id="pdf-viewer" class="pdf-viewer section light-background">
-      
-      <!-- Section Title -->
-      <div class="container section-title">
-        <span>Recruiting for HEAT English</span>
-        <h2>Recruiting for HEAT English</h2>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-12">
-            <!-- PDF Controls -->
-            <div class="pdf-controls">
-              <button id="pdf-prev" class="pdf-nav-btn" aria-label="Página anterior">
-                <i class="bi bi-chevron-left"></i>
-              </button>
-              <div class="pdf-page-info">
-                <span id="pdf-page-num">1</span> / <span id="pdf-total-pages">-</span>
-              </div>
-              <button id="pdf-next" class="pdf-nav-btn" aria-label="Página siguiente">
-                <i class="bi bi-chevron-right"></i>
-              </button>
-              <a href="pdf/WitFolk Enterprise SAS (Hostile Environment Recruitment Process).pdf" 
-                 target="_blank" 
-                 class="pdf-download-btn"
-                 title="Descargar PDF">
-                <i class="bi bi-download"></i> Descargar
-              </a>
-            </div>
-            
-            <!-- PDF Canvas Container -->
-            <div class="pdf-container">
-              <div class="pdf-loader">
-                <div class="spinner"></div>
-                <p>Cargando documento...</p>
-              </div>
-              <canvas id="pdf-canvas" class="pdf-canvas"></canvas>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </section><!-- /PDF Viewer Section -->
-
-    <!-- PDF Viewer Section - Arabic Brochure -->
-    <section id="pdf-viewer-arabic" class="pdf-viewer section light-background">
-      
-      <!-- Section Title -->
-      <div class="container section-title">
-        <span>Recruiting for HEAT arabe</span>
-        <h2>Recruiting for HEAT arabe</h2>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-12">
-            <!-- PDF Controls -->
-            <div class="pdf-controls">
-              <button id="pdf-arabic-prev" class="pdf-nav-btn" aria-label="Página anterior">
-                <i class="bi bi-chevron-left"></i>
-              </button>
-              <div class="pdf-page-info">
-                <span id="pdf-arabic-page-num">1</span> / <span id="pdf-arabic-total-pages">-</span>
-              </div>
-              <button id="pdf-arabic-next" class="pdf-nav-btn" aria-label="Página siguiente">
-                <i class="bi bi-chevron-right"></i>
-              </button>
-              <a href="pdf/WITFOLK-BROCHURE (Árabe).pdf" 
-                 target="_blank" 
-                 class="pdf-download-btn"
-                 title="Descargar PDF">
-                <i class="bi bi-download"></i> Descargar
-              </a>
-            </div>
-            
-            <!-- PDF Canvas Container -->
-            <div class="pdf-container">
-              <div class="pdf-loader pdf-arabic-loader">
-                <div class="spinner"></div>
-                <p>Cargando documento...</p>
-              </div>
-              <canvas id="pdf-arabic-canvas" class="pdf-canvas"></canvas>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </section><!-- /PDF Viewer Section - Arabic -->
 
     <!-- Portfolio Section -->
     <section id="quotation" class="portfolio section">
